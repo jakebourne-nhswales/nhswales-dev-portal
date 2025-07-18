@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NHS Wales API Catalogue</title>
+    <link rel="stylesheet" href="assets/css/govuk-frontend.min.css">
+    <style>
+        .status-error {
+            color: #d4351c; /* GOV.UK red */
+        }
+        .status-not-available {
+            color: #ffdd00; /* GOV.UK yellow */
+        }
+        .status-ready {
+            color: #00703c; /* GOV.UK green */
+        }
+    </style>
+</head>
+
+
+<body class="govuk-template__body">
+    <header class="govuk-header" role="banner" data-module="govuk-header">
+        <div class="govuk-header__container govuk-width-container">
+            <div class="govuk-header__logo">
+                <a href="/" class="govuk-header__link govuk-header__link--homepage">
+                    <span class="govuk-header__logotype">
+                        <img src="assets/api-portal.png" alt="GOV.UK">  
+                    </span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="govuk-main-wrapper govuk-width-container" id="main-content" role="main">
+        <h1 class="govuk-heading-xl">API Status Dashboard</h1>
+        <p class="govuk-body">Monitor the status of our APIs across different environments.</p>
+
+
+        <table class="govuk-table">
+                        <thead class="govuk-table__head">
+                            <tr class="govuk-table__row">
+                                <th class="govuk-table__header" scope="col"></th>
+                                <th class="govuk-table__header" scope="col">Sandbox</th>            
+                                <th class="govuk-table__header" scope="col">Development</th>
+                                <th class="govuk-table__header" scope="col">Staging</th>
+                                <th class="govuk-table__header" scope="col">UAT</th>
+                                <th class="govuk-table__header" scope="col">Production</th>
+                            </tr>
+                        </thead>
+                        <tbody class="govuk-table__body">
+                            <tr class="govuk-table__row">
+                                <th class="govuk-table__header" scope="row">Patient Documents</th>
+                                <td class="govuk-table__cell status-ready">Ready</td>
+                                <td class="govuk-table__cell status-ready">Ready</td>
+                                <td class="govuk-table__cell status-error">Error</td>
+                                <td class="govuk-table__cell status-error">Error</td>
+                                <td class="govuk-table__cell status-not-available">Not Available</td>
+                            </tr>
+                            <tr class="govuk-table__row">
+                                <th class="govuk-table__header" scope="row">Patient Identity and Demographics</th>
+                                <td class="govuk-table__cell status-ready">Ready</td>
+                                <td class="govuk-table__cell status-not-available">Not Available</td>
+                                <td class="govuk-table__cell status-ready">Ready</td>
+                                <td class="govuk-table__cell status-error">Error</td>
+                                <td class="govuk-table__cell status-error">Error</td>
+                            </tr>
+                            <tr class="govuk-table__row">
+                                <th class="govuk-table__header" scope="row">Reference Data</th>
+                                <td class="govuk-table__cell status-ready">Ready</td>            
+                                <td class="govuk-table__cell status-error">Error</td>
+                                <td class="govuk-table__cell status-not-available">Not Available</td>
+                                <td class="govuk-table__cell status-not-available">Ready</td>
+                                <td class="govuk-table__cell status-ready">Ready</td>
+                            </tr>
+                            <tr class="govuk-table__row">
+                                <th class="govuk-table__header" scope="row">Observations</th>
+                                <td class="govuk-table__cell status-ready">Ready</td>                        
+                                <td class="govuk-table__cell status-ready">Ready</td>
+                                <td class="govuk-table__cell status-ready">Ready</td>
+                                <td class="govuk-table__cell status-ready">Ready</td>
+                                <td class="govuk-table__cell status-error">Error</td>
+                            </tr>
+                            <tr class="govuk-table__row">
+                                <th class="govuk-table__header" scope="row">Patient Activity</th>
+                                <td class="govuk-table__cell status-ready">Ready</td>            
+                                <td class="govuk-table__cell status-not-available">Not Available</td>
+                                <td class="govuk-table__cell status-error">Error</td>
+                                <td class="govuk-table__cell status-ready">Ready</td>
+                                <td class="govuk-table__cell status-ready">Ready</td>
+                            </tr>
+                            <tr class="govuk-table__row">
+                                <th class="govuk-table__header" scope="row">Diagnostics</th>
+                                <td class="govuk-table__cell status-ready">Ready</td>            
+                                <td class="govuk-table__cell status-ready">Ready</td>
+                                <td class="govuk-table__cell status-not-available">Not Available</td>
+                                <td class="govuk-table__cell status-not-available">Not Available</td>
+                                <td class="govuk-table__cell status-error">Error</td>
+                            </tr>
+                            <tr class="govuk-table__row">
+                                <th class="govuk-table__header" scope="row">Medications and Allergies</th>
+                                <td class="govuk-table__cell status-ready">Ready</td>            
+                                <td class="govuk-table__cell status-error">Error</td>
+                                <td class="govuk-table__cell status-ready">Ready</td>
+                                <td class="govuk-table__cell status-not-available">Not Available</td>
+                                <td class="govuk-table__cell status-not-available">Not Available</td>
+                            </tr>
+                            <tr class="govuk-table__row">
+                                <th class="govuk-table__header" scope="row">Health Terminology Reference</th>
+                                <td class="govuk-table__cell status-ready">Ready</td>            
+                                <td class="govuk-table__cell status-not-available">Not Available</td>
+                                <td class="govuk-table__cell status-error">Error</td>
+                                <td class="govuk-table__cell status-ready">Ready</td>
+                                <td class="govuk-table__cell status-ready">Ready</td>
+                            </tr>
+                            <tr class="govuk-table__row">
+                                <th class="govuk-table__header" scope="row">Event Subscription Service</th>
+                                <td class="govuk-table__cell status-ready">Ready</td>            
+                                <td class="govuk-table__cell status-ready">Ready</td>
+                                <td class="govuk-table__cell status-ready">Ready</td>
+                                <td class="govuk-table__cell status-not-available">Not Available</td>
+                                <td class="govuk-table__cell status-not-available">Not Available</td>
+                            </tr>
+
+                            <tr class="govuk-table__row">
+                                    <th class="govuk-table__header" scope="row">Vaccinations</th>
+                                    <td class="govuk-table__cell status-ready">Ready</td>                            
+                                    <td class="govuk-table__cell status-error">Error</td>
+                                    <td class="govuk-table__cell status-ready">Ready</td>
+                                    <td class="govuk-table__cell status-not-available">Not Available</td>
+                                    <td class="govuk-table__cell status-not-available">Not Available</td>
+                                </tr>
+                                <tr class="govuk-table__row">
+                                    <th class="govuk-table__header" scope="row">Patient Engagement</th>
+                                    <td class="govuk-table__cell status-ready">Ready</td>            
+                                    <td class="govuk-table__cell status-not-available">Not Available</td>
+                                    <td class="govuk-table__cell status-error">Error</td>
+                                    <td class="govuk-table__cell status-ready">Ready</td>
+                                    <td class="govuk-table__cell status-ready">Ready</td>
+                                </tr>
+                                <tr class="govuk-table__row">
+                                    <th class="govuk-table__header" scope="row">Health Statistics</th>
+                                    <td class="govuk-table__cell status-ready">Ready</td>            
+                                    <td class="govuk-table__cell status-ready">Ready</td>
+                                    <td class="govuk-table__cell status-ready">Ready</td>
+                                    <td class="govuk-table__cell status-ready">Ready</td>
+                                    <td class="govuk-table__cell status-not-available">Not Available</td>
+                                </tr>
+    
+                        </tbody>
+                    </table>
+                </main>
+
+    <footer class="govuk-footer" role="contentinfo">
+        <div class="govuk-width-container">
+        </div>
+    </footer>
+</body>
+
+<script type="module" src="assets/js/govuk-frontend.min.js"></script>
+initAll();
+  <script type="module">
+    import { initAll } from 'assets/js/govuk-frontend.min.js'
+    initAll()
+  </script>
+
+</html>
